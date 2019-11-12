@@ -1,0 +1,33 @@
+{
+  "author": {
+    "name": "Kieran Dolan",
+    "email": "DOLANKIE@uk.ibm.com"
+  },
+  "contributors": [
+    {
+      "name": "Andreas Wittig",
+      "email": "andreas@widdix.de"
+    }
+  ],
+  "bundleDependencies": false,
+  "dependencies": {
+    "aws-sdk": "2.569.0",
+    "proxy-agent": "3.1.1",
+    "when": "3.7.8"
+  },
+  "deprecated": false,
+  "description": "Advanced implementation of the node-red storage API for AWS S3",
+  "keywords": [
+    "node-red",
+    "storage",
+    "AWS",
+    "S3"
+  ],
+  "license": "Apache-2.0",
+  "main": "s3storage.js",
+  "name": "node-red-contrib-storage-s3-advanced",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.0.5"
+}
