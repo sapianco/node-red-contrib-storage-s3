@@ -1,29 +1,27 @@
 # node-red-contrib-storage-s3
 
-Node-Red module to support storage of node-red configuration data in AWS S3
-<p>
-requires the following configuration:
+Node-Red module to support storage of node-red configuration data in AWS S3, Minio and Ceph RadosGW
 
-credentials: Should be available in a credentials file - ~/.aws/credentials on Mac/Linux or C:\Users\USERNAME\.aws\credentials on Windows
-</p>
-<p>
-settings.js: the following parameters can be added
-<ul>
-<li>awsRegion: optional region such as eu-west-1</li>
-<li>awsS3Appname: optional name of application</li>
-<li>awsS3Bucket: optional name of S3 bucket to use</li>
-<li>storageModule: require('node-red-contrib-storage-s3'),</li>
-</ul>
-</p>
-default settings for optional configuration:
-<ul>
-<li>awsRegion: 'eu-west-1'</li>
-<li>awsS3Bucket: user display name + '-node-red'</li>
-<li>awsS3Appname: aws instance name</li>
-</ul>
+This Node-red-contrib-storage-s3 Fork from Kieran Dolan (@kierandol) npm.js version, Change setting to use enviroments variables to work better whit Kubernetes.
+
+Enviroment variables.
+
+``` env
+S3_ACCESS_KEY_ID=CHANGEME
+S3_SECRET_ACCESS_KEY=CHANGEME
+S3_ENDPOIT=https://ceph-rados-gw.example.com.co
+S3_FORCE_PATH_STYLE=1
+S3_SIGNATURE_VERSION=v4
+S3_BUCKET=nodered-flows ; #Optional
+```
+
 Author
 -------
 Kieran Dolan (@kierandol)
+
+Contributors
+------------
+Sebastian Rojo (@arpagon) sebatian.rojo at sapian.com.co
 
 Copyright and license
 ----------------------

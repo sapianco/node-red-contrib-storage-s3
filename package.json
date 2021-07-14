@@ -7,12 +7,17 @@
     {
       "name": "Andreas Wittig",
       "email": "andreas@widdix.de"
+    },
+    {
+      "name": "Sebastian Rojo",
+      "email": "sebastian.rojo@sapian.com.co"
     }
   ],
   "bundleDependencies": false,
   "dependencies": {
     "aws-sdk": "2.569.0",
-    "proxy-agent": "3.1.1",
+    "dotenv": "^10.0.0",
+    "proxy-agent": "^4.0.1",
     "when": "3.7.8"
   },
   "deprecated": false,
@@ -25,7 +30,7 @@
   ],
   "license": "Apache-2.0",
   "main": "s3storage.js",
-  "name": "node-red-contrib-storage-s3-advanced",
+  "name": "node-red-contrib-storage-s3",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

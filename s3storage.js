@@ -1,5 +1,5 @@
 /**
- * Copyright 2014 IBM Corp.
+ * Copyright 2014 IBM Corp. 
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -84,12 +84,19 @@ function prepopulateFlows(resolve) {
 var s3storage = {
     init: function(_settings) {
         settings = _settings;
-        s3BucketName = settings.awsS3Bucket ;
+        s3BucketName = process.env.S3_BUCKET;
+        
         appname = settings.awsS3Appname || require('os').hostname();
         AWS.config.region = settings.awsRegion || 'eu-west-1';
             
         return when.promise(function(resolve,reject) {
-            s3 = new AWS.S3();
+            s3 = new AWS.S3({
+                accessKeyId: process.env.S3_ACCESS_KEY_ID ,
+                secretAccessKey: process.env.S3_SECRET_ACCESS_KEY ,
+                endpoint: process.env.S3_ENDPOIT ,
+                s3ForcePathStyle: process.env.S3_FORCE_PATH_STYLE,
+                signatureVersion: process.env.S3_SIGNATURE_VERSION
+            });
             s3.listBuckets(function(err, data) {
                 if (err) {
                     console.error("s3s access error " + err + err.stack) ;
