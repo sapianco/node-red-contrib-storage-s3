@@ -12,7 +12,9 @@ S3_SECRET_ACCESS_KEY=CHANGEME
 S3_ENDPOIT=https://ceph-rados-gw.example.com.co
 S3_FORCE_PATH_STYLE=1
 S3_SIGNATURE_VERSION=v4
-S3_BUCKET=nodered-flows ; #Optional
+S3_BUCKET=nodered-flows ; # Optional
+S3_REGION=us-east-1
+S3_APP_NAME=nodered ;# Directory on S3
 ```
 
 Author

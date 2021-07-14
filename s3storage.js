@@ -86,8 +86,8 @@ var s3storage = {
         settings = _settings;
         s3BucketName = process.env.S3_BUCKET;
         
-        appname = settings.awsS3Appname || require('os').hostname();
-        AWS.config.region = settings.awsRegion || 'eu-west-1';
+        appname = process.env.S3_APP_NAME || require('os').hostname();
+        AWS.config.region = process.env.S3_REGION || 'eu-west-1';
             
         return when.promise(function(resolve,reject) {
             s3 = new AWS.S3({
