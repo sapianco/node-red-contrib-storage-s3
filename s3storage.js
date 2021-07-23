@@ -93,7 +93,7 @@ var s3storage = {
             s3 = new AWS.S3({
                 accessKeyId: process.env.S3_ACCESS_KEY_ID ,
                 secretAccessKey: process.env.S3_SECRET_ACCESS_KEY ,
-                endpoint: process.env.S3_ENDPOIT ,
+                endpoint: process.env.S3_ENDPOINT ,
                 s3ForcePathStyle: process.env.S3_FORCE_PATH_STYLE,
                 signatureVersion: process.env.S3_SIGNATURE_VERSION
             });
