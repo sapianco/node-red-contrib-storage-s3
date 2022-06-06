@@ -2,11 +2,12 @@ require('dotenv').config()
 var AWS = require('aws-sdk');
 
 var s3  = new AWS.S3({
-          accessKeyId: process.env.S3_ACCESS_KEY_ID ,
-          secretAccessKey: process.env.S3_SECRET_ACCESS_KEY ,
-          endpoint: process.env.S3_ENDPOIT ,
+          accessKeyId: process.env.S3_ACCESS_KEY_ID,
+          secretAccessKey: process.env.S3_SECRET_ACCESS_KEY,
+          endpoint: process.env.S3_ENDPOINT,
           s3ForcePathStyle: process.env.S3_FORCE_PATH_STYLE, // needed with minio?
-          signatureVersion: process.env.S3_SIGNATURE_VERSION
+          signatureVersion: process.env.S3_SIGNATURE_VERSION,
+          region: process.env.S3_REGION
 });
 
 // putObject operation.
